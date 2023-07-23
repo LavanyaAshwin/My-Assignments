@@ -13,7 +13,7 @@ public class SeleniumAssign {
 		ChromeDriver driver=new ChromeDriver();
 		driver.get("http://leaftaps.com/opentaps/control/login");
 		driver.manage().window().maximize();    
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.findElement(By.id("username")).sendKeys("demoSalesManager");
 		driver.findElement(By.id("password")).sendKeys("crmsfa");
 		driver.findElement(By.className("decorativeSubmit")).click();
@@ -26,7 +26,7 @@ public class SeleniumAssign {
 		driver.findElement(By.id("createLeadForm_primaryEmail")).sendKeys("lavany.ashwin@gmail.com");
 		driver.findElement(By.id("createLeadForm_primaryPhoneNumber")).sendKeys("9677852852");
 		driver.findElement(By.name("submitButton")).click();
-		//driver.close();
+		driver.close();
 		
 	}
 
